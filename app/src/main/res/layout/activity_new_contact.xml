@@ -10,11 +10,12 @@
     <ImageView
         android:id="@+id/imageView_newContact_icon"
         android:layout_width="70dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_alignParentStart="true"
         android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="choosePicture"
         app:srcCompat="@drawable/contact" />
 
     <EditText

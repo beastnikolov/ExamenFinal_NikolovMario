@@ -13,7 +13,7 @@ public class ImageUtilities {
 
     public byte[] getBitMapByteArray(Bitmap bitmap) {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 0 ,byteArrayOutputStream);
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100 ,byteArrayOutputStream);
         return byteArrayOutputStream.toByteArray();
     }
 
