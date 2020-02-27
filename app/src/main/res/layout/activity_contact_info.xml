@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactInfoActivity">
+
+    <ImageView
+        android:id="@+id/imageView_contactInfo_icon"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/contact" />
+
+    <TextView
+        android:id="@+id/textView_contactInfo_Name"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/imageView_contactInfo_icon"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Contact Name" />
+
+    <TextView
+        android:id="@+id/textView_contactInfo_Number"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/textView_contactInfo_Name"
+        android:layout_height="wrap_content"
+        android:text="Contact Number" />
+
+    <LinearLayout
+        android:id="@+id/buttonlayout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_contactInfo_Number"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_info_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="goBackContactInformation"
+            android:text="back"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/button_info_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:onClick="deleteContact"
+            android:text="delete"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</RelativeLayout>
