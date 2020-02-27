@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_add"
+        android:title="Save"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/whiteCustom"
+        android:icon="@drawable/ic_save_black_24dp"
+    />
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_close_black_24dp"
+        android:iconTint="@color/whiteCustom"
+        android:title="Back"
+        app:showAsAction="ifRoom" />
+</menu>

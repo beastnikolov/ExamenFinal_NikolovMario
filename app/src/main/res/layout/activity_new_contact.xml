@@ -3,66 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:excludeFromRecents="true"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:excludeFromRecents="true"
+    android:padding="10dp"
     tools:context=".NewContactActivity">
 
-    <ImageView
-        android:id="@+id/imageView_newContact_icon"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:onClick="choosePicture"
-        app:srcCompat="@drawable/contact" />
-
-    <EditText
-        android:id="@+id/editText_newContact_name"
+    <TextView
+        android:id="@+id/taskView_show_title_newtask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imageView_newContact_icon"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName" />
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/abel"
+        android:text="New Task"
+        android:textColor="@color/design_default_color_primary_dark"
+        android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editText_newContact_number"
+        android:id="@+id/editText_newTask_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText_newContact_name"
-        android:layout_toRightOf="@id/imageView_newContact_icon"
+        android:layout_below="@id/taskView_show_title_newtask"
+        android:layout_centerInParent="true"
         android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="number" />
+        android:hint="Task Name"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black" />
 
     <LinearLayout
         android:id="@+id/button_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText_newContact_number"
+        android:layout_below="@id/editText_newTask_name"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button_newcontact_add"
+            android:id="@+id/button_newtask_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorAccent"
-            android:onClick="createNewContact"
+            android:onClick="createnewTask"
             android:text="add"
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/button_newcontact_back"
+            android:id="@+id/button_newtask_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/colorAccent"
-            android:onClick="cancelNewContact"
+            android:onClick="cancelNewTask"
             android:text="back"
             android:textColor="@android:color/white" />
     </LinearLayout>

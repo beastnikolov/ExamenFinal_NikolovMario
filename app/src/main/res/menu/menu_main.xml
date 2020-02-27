@@ -14,4 +14,15 @@
         android:title="Generate Contacts"
         app:showAsAction="never"
         ></item>
+    <item
+        android:id="@+id/show_NotCompleted"
+        android:orderInCategory="100"
+        android:title="Show non-Completed"
+        app:showAsAction="never"
+        ></item>
+    <item android:id="@+id/show_Completed"
+        android:orderInCategory="100"
+        android:title="Show Completed"
+        app:showAsAction="never"
+        ></item>
 </menu>
