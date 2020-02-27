@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class ContactInfoActivity extends AppCompatActivity {
     Contact contact;
     DataBaseManager dataBaseManager;
+    ImageUtilities imageUtilities;
     ImageView contactIcon;
     TextView contactName;
     TextView contactNumber;
@@ -19,10 +20,13 @@ public class ContactInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_info);
+        imageUtilities = new ImageUtilities();
         dataBaseManager = new DataBaseManager(getApplicationContext());
         contact = (Contact) getIntent().getSerializableExtra("contact");
         contactName = findViewById(R.id.textView_contactInfo_Name);
         contactNumber = findViewById(R.id.textView_contactInfo_Number);
+        contactIcon = findViewById(R.id.imageView_contactInfo_icon);
+        contactIcon.setImageBitmap(imageUtilities.ByteArrayToBitmap(contact.getImageByteArray()));
         contactName.setText(contact.getContactName());
         contactNumber.setText(contact.getContactNumber());
     }
