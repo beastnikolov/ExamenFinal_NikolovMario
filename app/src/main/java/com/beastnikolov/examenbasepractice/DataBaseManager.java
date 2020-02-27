@@ -2,9 +2,12 @@ package com.beastnikolov.examenbasepractice;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 
 public class DataBaseManager extends SQLiteOpenHelper {
@@ -55,6 +58,22 @@ public class DataBaseManager extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("DELETE FROM " + TABLE_CONTACTS + " WHERE ID = '" + id + "'");
         Log.d("TESTING","Deleted ID " + id);
+    }
+
+    public void deleteAllContacts() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM  " + TABLE_CONTACTS);
+        Log.d("TESTING","Deleted all contacts!");
+    }
+
+    public void createDummies(Resources resources) {
+        ImageUtilities imageUtilities = new ImageUtilities();
+        Bitmap icon = BitmapFactory.decodeResource(resources, R.drawable.contact);
+        byte[] imagetest = imageUtilities.getBitMapByteArray(icon);
+        insertContact(imagetest,"Mario","692622437");
+        insertContact(imagetest,"Pere","698543437");
+        insertContact(imagetest,"Joan","405964046");
+        insertContact(imagetest,"Cabba","569549544");
     }
 
 

@@ -55,7 +55,7 @@ public class CustomRecyclerAdapter extends RecyclerView.Adapter<CustomRecyclerAd
                 Intent intent = new Intent(context,ContactInfoActivity.class);
                 intent.putExtra("contact",tempContact);
                // intent.putExtra("id",tempContact.getContactID());
-                Toast.makeText(context,"SELECTED ID: " + tempContact.getContactID(),Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context,"SELECTED ID: " + tempContact.getContactID(),Toast.LENGTH_SHORT).show();
                 context.startActivity(intent);
             }
         });

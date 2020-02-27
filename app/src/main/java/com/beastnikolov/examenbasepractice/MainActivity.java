@@ -20,6 +20,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -114,8 +115,17 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_delete) {
+            dataBaseManager.deleteAllContacts();
+            Toast.makeText(getApplicationContext(),"Deleted all contacts",Toast.LENGTH_SHORT).show();
+            fillRecyclerView();
+            customRecyclerAdapter.notifyDataSetChanged();
+        }
+        if (id == R.id.action_dummies) {
+            dataBaseManager.createDummies(getResources());
+            Toast.makeText(getApplicationContext(),"Created Dummy Contacts",Toast.LENGTH_SHORT).show();
+            fillRecyclerView();
+            customRecyclerAdapter.notifyDataSetChanged();
         }
 
         return super.onOptionsItemSelected(item);
